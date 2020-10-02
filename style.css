@@ -2,28 +2,50 @@ body {
   font-family: 'Carter One', sans-serif;
   background: rgba(242, 242, 242, .6);
   margin: 0;
+  padding: 0;
 }
+
 
 * {
   box-sizing: border-box
 }
 
 /*NAVBAR*/
+
 .navbar {
+  height: 50px;
+  width: 100%;
   background-color: #295505;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.navbar a {
-  font-weight: 250;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
+.navbar > .nav-btn {
+  display: none;
 }
+
+.navbar > .nav-links {
+  display: inline;
+  font-size: 18px;
+}
+
+.navbar > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar > #nav-check {
+  display: none;
+}
+
 
 .anchor {
   display: block;
@@ -32,15 +54,19 @@ body {
   visibility: hidden;
 }
 
+
+
 /*JUMBOTRON*/
 .jumbotron {
   height: 100vh; /*height to 100% of view height*/
   background: #a4d531; /*background color to blue*/
   margin-bottom: 0; /*no bottom margin*/
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 
 .jumbotron-text {
   /*TAGLINE UNDER NAME*/
@@ -309,4 +335,60 @@ h4 {
   right: 10px; 
   color: #295505;
   display: inline-block;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+
+@media  screen and (max-device-width: 700px) {
+  .navbar > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .navbar > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .navbar > .nav-btn > label:hover,.navbar  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .navbar > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #295505;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    right: 0;
+  }
+  .navbar > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .navbar > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .navbar > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-device-width: 1100px){
+  .jumbotron{
+    height: auto;
+  }
 }
