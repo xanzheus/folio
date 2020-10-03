@@ -46,6 +46,12 @@ body {
   flex-direction: column;
 }
 
+@media(max-width: 1100px){
+  .jumbotron{
+    height: auto;
+  }
+}
+
 .jumbotron-text {
   /*TAGLINE UNDER NAME*/
   font-weight: 400;
