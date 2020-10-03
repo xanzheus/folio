@@ -11,12 +11,12 @@
 
     <!-- BEGIN NAVBAR -->
     <div class="navbar">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" class="nav-item">About</a>
+      <a href="#experience" class="nav-item">Experience</a>
+      <a href="#education" class="nav-item">Education</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#skills" class="nav-item">Skills</a>
+      <a href="#contact" class="nav-item">Contact</a>
     </div>
     <!-- END NAVBAR -->
 
@@ -31,23 +31,23 @@
         <div class="jumbotron-social">
           <ul class="ul-social">
             <li class="li-social-links">
-              <a class="social" href="https://github.com/sakshigupta06" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a class="social" href="https://github.com/sakshigupta06" target="_blank"><i class="fa fa-github social-btn" aria-hidden="true"></i></a>
             </li>
             <li class="li-social-links">
-              <a class="social" href="https://www.linkedin.com/in/sakshigupta06/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              <a class="social" href="https://www.linkedin.com/in/sakshigupta06/" target="_blank"><i class="fa fa-linkedin social-btn" aria-hidden="true"></i></a>
             </li>
             <li class="li-social-links">
-              <a class="social" href="https://twitter.com/Sakshi_0612" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a class="social" href="https://twitter.com/Sakshi_0612" target="_blank"><i class="fa fa-twitter social-btn" aria-hidden="true"></i></a>
             </li>
             <li class="li-social-links"></li>
-              <a class="social" href="https://sakshi.hashnode.dev/" target="_blank"><i class="fa fa-h-square" aria-hidden="true"></i></a>
+              <a class="social" href="https://sakshi.hashnode.dev/" target="_blank"><i class="fa fa-h-square social-btn" aria-hidden="true"></i></a>
             </li>
             <li class="li-social-links">
-              <a class="social" href="https://instagram.com/_sakshigupta06" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a class="social" href="https://instagram.com/_sakshigupta06" target="_blank"><i class="fa fa-instagram social-btn" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>
-       <button class=" button"><a href="https://docs.google.com/document/d/1Q72nbwgbET1PWuMpG8k9JZM6VjPPKquQiambmUhedoo/edit?usp=sharing">Download my Resume</a></button> 
+       <button class="button" onclick="location.href = 'https://docs.google.com/document/d/1Q72nbwgbET1PWuMpG8k9JZM6VjPPKquQiambmUhedoo/edit?usp=sharing';">Download my Resume</button> 
         <div id="down-arrow">
           <span><a href="#about"><i class="fa fa-chevron-down" aria-hidden="true"></i></a></span>
         </div>
@@ -68,12 +68,12 @@
           <div class="content-body">
             <p>Hey there! I'm Sakshi, a 19-year-old college senior currently studying for a B.Tech in Computer Science. My passions are technology and writing, and when I'm not coding , I'm singing or trying to get a song out of my head (unsuccessfully.) I love to solve problems, whether it’s finding the most elegant way to write a line of code or figuring out which word fits best into a blog, I love the challenge of finding a way and discovering solutions. Maybe that’s why I love writing and the satisfaction that comes from finding just the right word. As long as there’s a problem to solve or a challenge to puzzle over, it’s bound to be something I love! Apart from this I love cooking/baking! 
             </p>
-            <p>Wondering if I might be a good fit for your company? Check out my <a href="https://www.linkedin.com/in/sakshigupta06/">[LinkedIn profile]!</a>
+            <p>Wondering if I might be a good fit for your company? Check out my <a href="https://www.linkedin.com/in/sakshigupta06/" class="active-link">LinkedIn profile</a>
               This site is a collection of my work, interests, and writings; if any of those things intrigue you, don't hesitate to reach out.
               </p>
-              <u><p>Contact Me:</p></u>
+              <u><p><b>Contact Me:</b></p></u>
               <p>Mobile No: +91 9811623640</p>
-              <p>E-mail address: <a href="mailto:hey@devsakshi.me">hey@devsakshi.me</a></p>
+              <p>E-mail address: <a href="mailto:hey@devsakshi.me" class="active-link">hey@devsakshi.me</a></p>
           </div>
         </div>
         <div class="side-content"></div>
@@ -192,10 +192,10 @@
                 <img src="image/music.png">
               </div>
               <div class="project-content">
-                <h3>Classify song genres from audio data</h3>
+                <h3>Classify Song Genres From Audio Data</h3>
                 <p class= "content-color">Using a dataset composed of songs of two music genres (Hip-Hop and Rock), I train a classifier to distinguish between the two genres based only on track information derived from Echonest (now part of Spotify). I first make use of pandas and seaborn packages in Python for subsetting the data, aggregating information, and creating plots. Next, I used the scikit-learn package to predict whether I can correctly classify a song's genre based on features such as danceability, energy, acousticness, tempo, etc. You will go over implementations of common algorithms such as PCA, logistic regression, decision trees, and so forth.
                 </p>
-                <a href="https://github.com/sakshigupta06/Project-Data-Camp/tree/master/PROJECT%201">Checkout my project</a>
+                <button class="project-btn" onclick="location.href = 'https://github.com/sakshigupta06/Project-Data-Camp/tree/master/PROJECT%201';">Checkout my project on <span class="fa fa-github"></span></button>
               </div>
             </div>
             <!-- CARD #2 -->
@@ -207,7 +207,7 @@
                 <h3>Predicting Credit Card Approvals</h3>
                 <p class= "content-color">Commercial banks receive a lot of applications for credit cards. Many of them get rejected for many reasons, like high loan balances, low income levels, or too many inquiries on an individual's credit report, for example. Manually analyzing these applications is mundane, error-prone, and time-consuming (and time is money!). Luckily, this task can be automated with the power of machine learning and pretty much every commercial bank does so nowadays. In this project, I will build an automatic credit card approval predictor using machine learning techniques, just like the real banks do using Supervised Learning with scikit-learn and Data Manipulation with Pandas.
                 </p>
-                <a href="https://github.com/sakshigupta06/Predicting-Credit-Card-Approvals">Checkout my project</a>
+                <button class="project-btn" onclick="location.href = 'https://github.com/sakshigupta06/Predicting-Credit-Card-Approvals';">Checkout my project on <span class="fa fa-github"></span></button>
               </div>
             </div>
             <!-- CARD #3 -->
@@ -290,7 +290,7 @@
           <div class="content-header">
           </div>
           <div class="content-body">
-            <p><h3> © Copyright 2020 Sakshi Gupta </h3></p>
+            <p><h3 class="copyright-div"> © Copyright 2020 Sakshi Gupta </h3></p>
           </div>
         </div>
         <div class="side-content"> </div>
